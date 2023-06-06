@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conversor de Medidas</title>
+    <style>
+        body {
+            font: 12pt Arial;
+        }
+
+        button {
+            display: flex;
+            font-size: 12pt;
+            padding: 20px;
+            margin-left: 46%;
+            margin-bottom: 2%;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        .situacao {
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Conversor de Medidas</h1>
+    <button onclick="clicou()">Converter</button>
+    <section class="situacao" id="calcular">
+        <p>Clique no botão acima para iniciar.</p>
+    </section>
+
+    <script>
+
+        function clicou() {
+            let m = Number(window.prompt('Digite uma distância em metros (m)'))
+
+            calcular.innerHTML = `<b><p>A distância de ${m} metros, corresponde a...</p></b>`
+            Km = (m/10**3).toFixed(3)
+            calcular.innerHTML += `<p>${Km} quilômetros (Km)</p>`
+            Hm = (m/10**2).toFixed(3)
+            calcular.innerHTML += `<p>${Hm} hectômetros (Hm)</p>`
+            Dam = (m/10**1).toFixed(3)
+            calcular.innerHTML += `<p>${Dam} decâmetros (Dam)</p>`
+            dm = (m*10**1).toFixed(3)
+            calcular.innerHTML += `<p>${dm} decímetros (dm)</p>`
+            cm = (m*10**2).toFixed(3)
+            calcular.innerHTML += `<p>${cm} centímetros (cm)</p>`
+            mm = (m*10**3).toFixed(3)
+            calcular.innerHTML += `<p>${mm} milímetros (mm)</p>`
+        }
+    </script>
+</body>
+
+</html>

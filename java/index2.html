@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Antecessor e Sucessor</title>
+    <style>
+        body {
+            font: 12pt Arial;
+        }
+
+        button {
+            display: flex;
+            font-size: 12pt;
+            padding: 20px;
+            margin-left: 46%;
+            margin-bottom: 2%;
+        }
+
+        h1 {
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Antes e Depois</h1>
+    <button onclick="clicou()">Começar</button>
+    <script>
+        function clicou() {
+            let ano = Number(window.prompt('Digite um número inteiro: '))
+
+            window.alert(`O Antecessor de ${ano} é ${ano - 1}`)
+            window.alert(`O Sucessor de ${ano} é ${ano + 1}`)
+        }
+    </script>
+</body>
+
+</html>

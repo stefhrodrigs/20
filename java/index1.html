@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ano Bissexto</title>
+    <style>
+        body {
+            font: 12pt Arial;
+        }
+
+        button {
+            display: flex;
+            font-size: 12pt;
+            padding: 20px;
+            margin-left: 46%;
+            margin-bottom: 2%;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        .situacao {
+            text-align: center;
+        }
+
+        .verde {
+            color: #42882D;
+            background: #A6EB9A;
+        }
+
+        .vermelho {
+            color: #7F180B;
+            background: #E28783;
+        }
+
+        .marrom {
+            color: #C3884B;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Ano Bissexto</h1>
+    <button onclick="clicou()">Verificar</button>
+    <section class="situacao" id="calcular">
+        <p>Informe um ano para saber se ele é Bissexto.</p>
+    </section>
+
+    <script>
+
+        function clicou() {
+            let ano = Number(window.prompt(`Qual é o ano que você quer verificar?`))
+            ano2 = ano.toFixed()
+
+            calcular.innerHTML = `<b><p>Analisando o ano de ${ano}...</p></b>`
+
+            if (ano2 % 4 == 0) {
+                calcular.innerHTML += `O ano de ${ano} <mark class="verde"><b>É UM ANO BISSEXTO<b></mark>.`
+            } else {
+                calcular.innerHTML += `O ano de ${ano} <mark class="vermelho"><b>NÃO É UM ANO BISSEXTO<b></mark>.`
+            }
+        }
+    </script>
+</body>
+
+</html>
